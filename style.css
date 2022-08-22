@@ -1,7 +1,8 @@
 /* * {
-    background-color: rgb(70, 64, 64);
+    background-color: rgb(54, 52, 52);
     color: white;
 } */
+
 #header-section {
     background-color: black;
     height: 800px;
@@ -31,6 +32,10 @@
     border: 1px solid rgb(196, 91, 53);
     border-radius: 5px;
     color: white;
+}
+
+#player-card {
+    background-color: rgb(54, 52, 52);
 }
 
 .card {
