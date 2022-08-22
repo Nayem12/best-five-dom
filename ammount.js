@@ -1,4 +1,5 @@
 
+// All field input value =================
 function playertext(innerid) {
     const playerfield = document.getElementById(innerid);
     const playerName = playerfield.innerText;
@@ -9,6 +10,7 @@ function playerammount(innerid) {
     const playerName = playerfield.innerText;
     return playerName;
 }
+// All input id value 
 
 function inputvalue(inputid) {
     const selectInput = document.getElementById(inputid);
@@ -17,6 +19,7 @@ function inputvalue(inputid) {
     selectInput.value = '';
     return inputammount;
 }
+// player name added selected button 
 const players = [];
 function select(element) {
     const playersName = element.parentNode.children[0].innerText;
@@ -52,7 +55,7 @@ function setPlayerName(nameList) {
         tableBody.appendChild(tr);
     }
 }
-
+// player cast ammount 
 
 document.getElementById('Calculate').addEventListener('click', function () {
     const perplayercost = inputvalue('player-cost');
@@ -62,6 +65,8 @@ document.getElementById('Calculate').addEventListener('click', function () {
 
 
 })
+
+// all amount total balance 
 document.getElementById('Total-ammount').addEventListener('click', function () {
     const Allplayerammount = playerammount('player-expenses')
 
