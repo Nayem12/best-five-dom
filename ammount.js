@@ -1,4 +1,3 @@
-
 // All field input value =================
 function playertext(innerid) {
     const playerfield = document.getElementById(innerid);
@@ -60,8 +59,14 @@ function setPlayerName(nameList) {
 document.getElementById('Calculate').addEventListener('click', function () {
     const perplayercost = inputvalue('player-cost');
     const playerlist = players.length;
-    const playerexpenses = document.getElementById('player-expenses');
-    playerexpenses.innerText = perplayercost * playerlist;
+    if (playerlist < 6) {
+        const playerexpenses = document.getElementById('player-expenses');
+        playerexpenses.innerText = perplayercost * playerlist;
+
+    }
+    else {
+        return;
+    }
 
 
 })
