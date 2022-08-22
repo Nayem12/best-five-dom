@@ -68,7 +68,8 @@ document.getElementById('Calculate').addEventListener('click', function () {
 
     }
     else {
-        return;
+        const playerexpenses = document.getElementById('player-expenses');
+        playerexpenses.innerText = perplayercost * 5;
     }
 
 
