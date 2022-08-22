@@ -39,116 +39,179 @@
 
     <!-- banner part End -->
     <!-- ========================================================= -->
-    <main class="mt-4">
-        <div class="container text-center">
-            <div class="row g-4">
-                <div class="col-3 g-4">
-                    <div class="card" style="width: 15rem;">
-                        <img src="image/naymer.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title" id="player-name1">Neymar Jr</h5>
-                            <p class="card-text">36 goals . 120 Assist</p>
-                            <button type="button" id="btn" class="btn btn-primary btn-lg "
-                                onclick="playername1()">Select</button>
+    <main>
+
+        <section id="player-card">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <img src="image/naymer.png" class="card-img-top" alt="...">
+                            <div class="card-info text-center">
+                                <h3 class="py-3 fw-bold">Neymar Jr</h3>
+                                <ul class="d-flex gap-5 justify-content-center fs-5">
+                                    <li>36 Goals</li>
+                                    <li>120 Assist</li>
+                                </ul>
+                                <button
+                                    class="btn rounded-0 mb-3 mt-1 px-5  bg-primary  text-uppercase fw-semibold fs-5 mb-2"
+                                    onclick='select(this)'>SELECT</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 15rem;">
-                        <img src="image/mesi.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title" id="player-name2">Lionel Messi</h5>
-                            <p class="card-text">36 goals . 120 Assist</p>
-                            <button type="button" class="btn btn-primary btn-lg" onclick="playername2()">Select</button>
+
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <img src="image/mesi.png" class="card-img-top" alt="...">
+                            <div class="card-info text-center  ">
+                                <h3 class="py-3 fw-bold">Lionel Messi</h3>
+                                <ul class="d-flex gap-5 justify-content-center fs-5">
+                                    <li>36 Goals</li>
+                                    <li>120 Assist</li>
+                                </ul>
+                                <button
+                                    class="btn rounded-0 mb-3 mt-1 px-5  bg-primary  text-uppercase fw-semibold fs-5 mb-2"
+                                    onclick='select(this)'>SELECT</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 15rem;">
-                        <img src="image/mbappe.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title" id="player-name3">Kylian Mbappé</h5>
-                            <p class="card-text">36 goals . 120 Assist</p>
-                            <button type="button" class="btn btn-primary btn-lg" onclick="playername3()">Select</button>
+
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <img src="image/mbappe.png" class="card-img-top" alt="...">
+                            <div class="card-info text-center  ">
+                                <h3 class="py-3 fw-bold">Kylian Mbappé</h3>
+                                <ul class="d-flex gap-5 justify-content-center fs-5">
+                                    <li>36 Goals</li>
+                                    <li>120 Assist</li>
+                                </ul>
+                                <button
+                                    class="btn rounded-0 mb-3 mt-1 px-5  bg-primary  text-uppercase fw-semibold fs-5 mb-2"
+                                    onclick='select(this)'>SELECT</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 15rem;">
-                        <h2 class="fs-2 text-uppercase py-3">Selected - V</h2>
-                        <ol class="py-3" id="player-input-field">
-                        </ol>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 15rem;">
-                        <img src="image/Sergio Ramos.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title" id="player-name4">Sergio Ramos</h5>
-                            <p class="card-text">36 goals . 120 Assist</p>
-                            <button type="button" class="btn btn-primary btn-lg" onclick="playername4()">Select</button>
+
+                    <div class="col-lg-3">
+                        <div class=" card  text-center rounded-0" style="height: 390px;">
+
+                            <h2 class="fs-2 text-uppercase  py-3">Selected-V</h2>
+                            <div id="crad-list" class="">
+                                <table id="" class="table ">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Player Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="selected-player-list">
+
+                                        <tr>
+                                            <!-- <th scope="row">1</th>
+                                                                 <td>Mark</td> -->
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 15rem;">
-                        <img src="image/Renato Sanches.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title" id="player-name5">Renato Sanches</h5>
-                            <p class="card-text">36 goals . 120 Assist</p>
-                            <button id="btn" type="button" class="btn btn-primary btn-lg"
-                                onclick="playername5()">Select</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 15rem;">
-                        <img src="image/Vítor Machado.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title" id="player-name6">Vítor Machado</h5>
-                            <p class="card-text">36 goals . 120 Assist</p>
-                            <button type="button" class="btn btn-primary btn-lg" onclick="playername6()">Select</button>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-3">
-                    <div class="card" style="width: 20rem;">
-                        <h2 class="fs-2 text-uppercase  py-3">Budget</h2>
-                        <label for="" class="  ml-5 fs-5">Per Player
-                            <input type="text" class="ms-3 py-2 " id="player-cost"
-                                style="background: none; width: 150px;">
-                        </label>
-                        <button
-                            class=" my-4   text-semiblod btn bg-primary mx-3 text-center fs-5 text-uppercase rounded-0"
-                            id="Calculate">Calculate</button>
-                        <h5 class="fs-5 fw-semibold ">Player Expenses : <span id="player-expenses">3000</span>
-                        </h5>
-                        <div>
-                            <label for="" class="mt-3  ml-5 fs-5">Manager
-                                <input type="text" id="manager-ammount" class="ms-3 py-2 "
-                                    style="background: none; width: 150px;">
-                            </label>
-
-                            <label for="" class=" my-4  ml-5 fs-5 ms-4">Coach
-                                <input type="text" id="coah-ammount" class="ms-3 py-2 "
-                                    style="background: none; width: 150px;">
-                            </label>
-
-                            <button id="Total-ammount"
-                                class=" my-4   text-semiblod btn bg-primary px-5 text-center fs-5 text-capitalize rounded-0">
-                                Calculate Total</button>
-
-                            <h5 class="ml-3  fs-4 fw-bold mb-5">Total:
-                                $<span id="total-ammount">500</span></h5>
-
-
-
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section id="player-card" class="mt-5">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <img src="image/Sergio Ramos.png" class="card-img-top" alt="...">
+                            <div class="card-info text-center  ">
+                                <h3 class="pt-3 fw-bold py-3">Sergio Ramos</h3>
+                                <ul class="d-flex gap-5 justify-content-center fs-5">
+                                    <li>36 Goals</li>
+                                    <li>120 Assist</li>
+                                </ul>
+                                <button
+                                    class="btn rounded-0 mb-3 mt-1 px-5  bg-primary  text-uppercase fw-semibold fs-5 mb-2"
+                                    onclick='select(this)'>SELECT</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <img src="image/Renato Sanches.png" class="card-img-top" alt="...">
+                            <div class="card-info text-center  ">
+                                <h3 class="py-3 fw-bold">Renato Sanches</h3>
+                                <ul class="d-flex gap-5 justify-content-center fs-5">
+                                    <li>36 Goals</li>
+                                    <li>120 Assist</li>
+                                </ul>
+                                <button
+                                    class="btn rounded-0 mb-3 mt-1 px-5  bg-primary  text-uppercase fw-semibold fs-5 mb-2"
+                                    onclick='select(this)'>SELECT</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <img src="image/Vítor Machado.png" class="card-img-top" alt="...">
+                            <div class="card-info text-center  ">
+                                <h3 class="py-3 fw-bold">Vítor Machado</h3>
+                                <ul class="d-flex gap-5 justify-content-center fs-5">
+                                    <li>36 Goals</li>
+                                    <li>120 Assist</li>
+                                </ul>
+                                <button
+                                    class="btn rounded-0 mb-3 mt-1 px-5  bg-primary  text-uppercase fw-semibold fs-5 mb-2"
+                                    onclick='select(this)'>SELECT</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card" style="width: 20rem;">
+                            <h2 class="fs-2 text-uppercase  py-3">Budget</h2>
+                            <label for="" class="  ml-5 ">Per Player
+                                <input type="text" class="ms-3" id="player-cost"
+                                    style="background: none; width: 150px;">
+                            </label>
+                            <button class=" my-4 btn bg-primary mx-3 text-center fs-5 text-uppercase rounded-0"
+                                id="Calculate">Calculate</button>
+                            <h5 class="fs-5  ">Player Expenses : <span id="player-expenses">3000</span>
+                            </h5>
+                            <div>
+                                <label for="" class="mt-3  ml-5 fs-5">Manager
+                                    <input type="text" id="manager-ammount" class="ms-3"
+                                        style="background: none; width: 150px;">
+                                </label>
+
+                                <label for="" class=" my-4  ml-5 fs-5 ms-4">Coach
+                                    <input type="text" id="coah-ammount" class="ms-3"
+                                        style="background: none; width: 150px;">
+                                </label>
+
+                                <button id="Total-ammount"
+                                    class=" my-4   text-semiblod btn bg-primary px-5 text-center text-capitalize rounded-0">
+                                    Calculate Total</button>
+
+                                <h5 class="ml-3  fs-4 fw-bold mb-5">Total:
+                                    $<span id="total-ammount">500</span></h5>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
 
     </main>

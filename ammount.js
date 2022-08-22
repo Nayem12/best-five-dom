@@ -1,4 +1,3 @@
-console.log('js file added done')
 
 function playertext(innerid) {
     const playerfield = document.getElementById(innerid);
@@ -18,50 +17,48 @@ function inputvalue(inputid) {
     selectInput.value = '';
     return inputammount;
 }
-function playername1() {
-    const playerName = playertext('player-name1')
-    const playerinputfield = document.getElementById('player-input-field');
-    const li = document.createElement('li');
-    li.innerText = playerName;
-    playerinputfield.appendChild(li);
+const players = [];
+function select(element) {
+    const playersName = element.parentNode.children[0].innerText;
+    const playersObj = {
+        playerName: playersName
+    };
+    players.push(playersObj);
 
-    const btn = document.getElementsByTagName('button');
-    btn.style.display
+    if (players.length <= 5) {
 
+        const select = element;
+        select.innerText = 'selected';
+        select.setAttribute('disabled', true);
+        console.log(select);
+    } else {
+        return alert('You cant add more than 5 Players');
+    }
+    setPlayerName(players);
+    console.log(players);
 }
-function playername2() {
-    const playerName = playertext('player-name2')
-    const playerinputfield = document.getElementById('player-input-field');
-    const li = document.createElement('li');
-    li.innerText = playerName;
-    playerinputfield.appendChild(li);
-}
-function playername3() {
-    const playerName = playertext('player-name3')
-    const playerinputfield = document.getElementById('player-input-field');
-    const li = document.createElement('li');
-    li.innerText = playerName;
-    playerinputfield.appendChild(li);
-}
-function playername4() {
-    const playerName = playertext('player-name4')
-    const playerinputfield = document.getElementById('player-input-field');
-    const li = document.createElement('li');
-    li.innerText = playerName;
-    playerinputfield.appendChild(li);
-}
-function playername5() {
-    const playerName = playertext('player-name5')
-    const playerinputfield = document.getElementById('player-input-field');
-    const li = document.createElement('li');
-    li.innerText = playerName;
-    playerinputfield.appendChild(li);
-}
-function playername6() {
-    const playerName = playertext('player-name6')
-    const playerinputfield = document.getElementById('player-input-field');
-    const li = document.createElement('li');
-    li.innerText = playerName;
-    playerinputfield.appendChild(li);
 
+function setPlayerName(nameList) {
+    const tableBody = document.getElementById('selected-player-list');
+    tableBody.innerHTML = '';
+    for (let i = 0; i < nameList.length; i++) {
+        const names = nameList[i].playerName;
+        console.log(names);
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <th scope="row">${i + 1}</th>
+          <td>${names}</td>
+          `;
+        tableBody.appendChild(tr);
+    }
 }
+
+
+document.getElementById('Calculate').addEventListener('click', function () {
+    const perplayercost = inputvalue('player-cost');
+    const playerlist = players.length;
+    const playerexpenses = document.getElementById('player-expenses');
+    playerexpenses.innerText = perplayercost * playerlist;
+
+
+})
