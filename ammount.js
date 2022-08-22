@@ -60,7 +60,7 @@ document.getElementById('Calculate').addEventListener('click', function () {
     const perplayercost = inputvalue('player-cost');
     const playerlist = players.length;
     if (isNaN(perplayercost)) {
-        alert('please input the ammount')
+        alert('please input the ammount');
     }
     else if (playerlist < 6) {
         const playerexpenses = document.getElementById('player-expenses');
