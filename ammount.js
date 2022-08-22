@@ -59,7 +59,10 @@ function setPlayerName(nameList) {
 document.getElementById('Calculate').addEventListener('click', function () {
     const perplayercost = inputvalue('player-cost');
     const playerlist = players.length;
-    if (playerlist < 6) {
+    if (isNaN(perplayercost)) {
+        alert('please input the ammount')
+    }
+    else if (playerlist < 6) {
         const playerexpenses = document.getElementById('player-expenses');
         playerexpenses.innerText = perplayercost * playerlist;
 
