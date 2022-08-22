@@ -62,3 +62,29 @@ document.getElementById('Calculate').addEventListener('click', function () {
 
 
 })
+document.getElementById('Total-ammount').addEventListener('click', function () {
+    const Allplayerammount = playerammount('player-expenses')
+
+    const Allplayerammountnumber = parseFloat(Allplayerammount)
+
+    const managerammount = inputvalue('manager-ammount');
+
+    const coahammount = inputvalue('coah-ammount');
+    if (isNaN(Allplayerammountnumber)) {
+        alert('please input the ammount')
+
+    }
+    else if (isNaN(managerammount)) {
+        alert('please input the ammount')
+    }
+    else if (isNaN(coahammount)) {
+        alert('please input the ammount')
+    }
+    else {
+        const allammount = Allplayerammountnumber + managerammount + coahammount;
+
+
+        const totalammount = document.getElementById('total-ammount');
+        totalammount.innerText = allammount;
+    }
+})
